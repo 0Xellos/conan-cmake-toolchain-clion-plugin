@@ -1,6 +1,6 @@
-# Conan CLion plugin
+# Conan & CMakeToolchain CLion plugin
 
-![Build](https://github.com/conan-io/conan-clion-plugin/workflows/Build/badge.svg)
+![Build](https://github.com/0Xellos/conan-cmake-toolchain-clion-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/11956.svg)](https://plugins.jetbrains.com/plugin/11956)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/11956.svg)](https://plugins.jetbrains.com/plugin/11956)
 
@@ -8,9 +8,19 @@
 
 <!-- Plugin description -->
 Conan, the C and C++ package manager, now directly in your IDE.
-List available libraries, install and use them without leaving CLion
+List available libraries, install and use them without leaving CLion.
+This plugin is a variation on the official Conan CLion plugin
 
 <!-- Plugin description end -->
+
+## Differences from the official plugin
+
+This plugin supports only `CMakeToolchain` generator with `cmake_layout`. This allows it
+to make assumptions about location of relevant generated files and, on the other hand,
+puts looser requirements on Conan CLI and outputs, which makes it somewhat
+backwards-compatible with Conan 1 (required version >= 1.62).
+
+That said, please move on to Conan 2.
 
 ## Using the Plugin
 
@@ -57,7 +67,7 @@ the necessary code snippets to add to CMake to use them.
   
 - Manually:
 
-  Download the [latest release](https://github.com/conan-io/conan-clion-plugin/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/0Xellos/conan-cmake-toolchain-clion-plugin/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 
