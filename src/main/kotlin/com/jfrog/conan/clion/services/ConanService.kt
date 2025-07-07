@@ -156,7 +156,7 @@ class ConanService(val project: Project) {
     }
 
     fun downloadCMakeProvider(update: Boolean = false) {
-        val cmakeProviderURL = "https://raw.githubusercontent.com/conan-io/cmake-conan/develop2/conan_provider.cmake"
+        val cmakeProviderURL = "https://raw.githubusercontent.com/0Xellos/cmake-toolchain-conan/develop2/conan_provider.cmake"
         val targetFile = getCMakeProviderFile()
 
         if (!targetFile.exists() || update && ConanPluginUtils.fileHasOverwriteComment(targetFile)) {
@@ -180,7 +180,7 @@ class ConanService(val project: Project) {
     }
 
     fun downloadLibraryData(update: Boolean = false) {
-        val remoteDataURL = "https://raw.githubusercontent.com/conan-io/conan-clion-plugin/develop2/src/main/resources/conan/targets-data.json"
+        val remoteDataURL = "https://raw.githubusercontent.com/0Xellos/cmake-toolchain-conan/develop2/src/main/resources/conan/targets-data.json"
         val targetFile = getRemoteDataFile()
 
         if (!targetFile.exists() || update) {
