@@ -1,10 +1,11 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.jfrog.conan.clion</id>
-    <name>Conan</name>
-    <vendor>JFrog</vendor>
+    <id>xellos.conan.clion</id>
+    <name>Conan and CMakeToolchain</name>
+    <vendor>xellos</vendor>
     <description><![CDATA[
         <a href="https://conan.io/">Conan</a> package manager integration with CLion.
+        Uses exclusively CMakeToolchain. This allows it to make assumptions about location of relevant generated files and, on the other hand, puts looser requirements on Conan CLI and outputs, which makes it somewhat backwards-compatible with Conan 1 (required version >= 1.62).
         <br>
         <br>
         Features:
@@ -12,8 +13,6 @@
             <li>Browse all available Conan packages in Conan Center</li>
             <li>Add selected dependencies and use conan.cmake dependency provider to automatically install them according to the CLion configuration</li>
         </ul>
-        Links: <a href="https://blog.conan.io/introducing-new-conan-clion-plugin/">Getting started</a>
-        | <a href="https://github.com/conan-io/conan-clion-plugin/issues">Issue tracker</a>
         <br>
     ]]></description>
 
@@ -21,18 +20,18 @@
     <depends>com.intellij.modules.clion</depends>
     <resource-bundle>messages.ui</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.jfrog.conan.clion.toolWindow.ConanWindowFactory"
+        <toolWindow factoryClass="xellos.conan.clion.toolWindow.ConanWindowFactory"
                     id="Conan"
                     anchor="bottom"
-                    icon="com.jfrog.conan.clion.icons.ConanIcons.Logo"/>
+                    icon="xellos.conan.clion.icons.ConanIcons.Logo"/>
 
-        <notificationGroup id="com.jfrog.conan.clion.notifications.general"
+        <notificationGroup id="xellos.conan.clion.notifications.general"
                            displayType="BALLOON"
                            key="generalNotificationKey"/>
     </extensions>
 
     <projectListeners>
-        <listener class="com.jfrog.conan.clion.listeners.ConanCMakeSettingsListener"
+        <listener class="xellos.conan.clion.listeners.ConanCMakeSettingsListener"
                   topic="com.jetbrains.cidr.cpp.cmake.CMakeSettingsListener"/>
     </projectListeners>
 </idea-plugin>

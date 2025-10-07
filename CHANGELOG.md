@@ -4,96 +4,17 @@
 
 ## [Unreleased]
 
-## [2.0.10] - 2025-03-28
-
-- Add "Scan Vulnerabilities" tab
-
-## [2.0.9] - 2025-01-21
-
-### Changed
-
-- Fix deprecated API usages
-
-## [2.0.8] - 2025-01-16
-
-### Changed
-
-- Update gradleVersion to 8.10.2
-- Update qodana to 2024.2.3
-- Unset untilBuild to not have an upper compatibility limit
-
-## [2.0.7] - 2024-10-01
-
-### Changed
-
-- Update gradle.properties to be compatible with CLion 243.*
-
-## [2.0.6] - 2024-08-14
-
-### Changed
-
-- Fixed deprecated usage of `ActionUpdateThread.OLD_EDT` by overriding `getActionUpdateThread()`
-
-## [2.0.5] - 2024-08-14
-
-### Changed
-
-- Update gradle.properties to be compatible with CLion 242.*
-
-## [2.0.4] - 2024-02-13
-
-### Changed
-
-- Update gradle.properties to be compatible with CLion 241.*
-
-## [2.0.3] - 2023-11-13
-
-### Changed
-
-- Fix selection of Conan executable when named "conan.exe"
-- Fix plugin compatibility with 2023.3
-
-## [2.0.2] - 2023-09-07
-
-### Bugfix
-
-- Fixed when only the Conan executable path was changed, it was not updated
-- Fixed adding multiple CONAN_COMMAND
-
-## [2.0.1] - 2023-08-31
-
-### Changed
-
-- Use relative (instead of absolute) path to pass the conan_provider.cmake to CMake
-
-### Bugfix
-
-- Fixed crash due to library data race condition when first using the plugin
-
-## [2.0.0] - 2023-08-30
+## [1.0.0] - 2025-10-07
 
 ### Added
 
-- Add description to plugin.xml
-- Bump minimun required CLion version to 223 (2022.3) to ensure the correct CMake version
-- New Conan CLion plugin compatible with Conan 2.X
+- Forked from https://github.com/conan-io/conan-clion-plugin
 
-## [2.0.0-beta.1] - 2023-08-24
+### Changed
 
-### Added
+- Plugin attribution and ownership
+- Source of CMake provider file to https://github.com/0Xellos/cmake-toolchain-conan
+- Location of CMake provider file to build directories
 
-- New Conan CLion plugin compatible with Conan 2.X
-
-[Unreleased]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.10...HEAD
-[2.0.10]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.9...v2.0.10
-[2.0.9]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.8...v2.0.9
-[2.0.8]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.7...v2.0.8
-[2.0.7]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.6...v2.0.7
-[2.0.6]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.5...v2.0.6
-[2.0.5]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.4...v2.0.5
-[2.0.4]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.3...v2.0.4
-[2.0.3]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.2...v2.0.3
-[2.0.2]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.1...v2.0.2
-[2.0.1]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.0...v2.0.1
-[2.0.0]: https://github.com/conan-io/conan-clion-plugin//compare/v2.0.0-beta.1...v2.0.0
-[2.0.0-beta.1]: https://github.com/conan-io/conan-clion-plugin//commits/v2.0.0-beta.1
+[Unreleased]: https://github.com/0Xellos/conan-cmake-toolchain-clion-plugin//compare/v2.0.10...HEAD
+[1.0.0]: https://github.com/0Xellos/conan-cmake-toolchain-clion-plugin//commits/v1.0.0
